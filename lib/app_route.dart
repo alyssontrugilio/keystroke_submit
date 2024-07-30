@@ -1,12 +1,12 @@
 import 'package:go_router/go_router.dart';
-import 'package:keystroke_submit/choice_page.dart';
-import 'package:keystroke_submit/counter_page.dart';
-import 'package:keystroke_submit/form_page.dart';
+
+import 'pages/pages.dart';
 
 class AppRoute {
-  static const choicePage = '/choice';
-  static const counterPage = '/counter';
-  static const formPage = '/form';
+  static const choicePage = '/choice_page';
+  static const counterPage = '/counter_page';
+  static const formPage = '/form_page';
+  static const nextPage = '/next_page';
 }
 
 final GoRouter router = GoRouter(
@@ -23,6 +23,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: AppRoute.formPage,
       builder: (context, state) => const FomrPage(),
+    ),
+    GoRoute(
+      path: AppRoute.formPage,
+      builder: (context, state) => const NextPage(),
     ),
   ],
 );

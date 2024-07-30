@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:keystroke_submit/app_route.dart';
-import 'package:keystroke_submit/second_page.dart';
+import 'package:keystroke_submit/pages/next_page.dart';
 
 class FomrPage extends StatelessWidget {
   const FomrPage({super.key});
@@ -30,7 +30,7 @@ class FomrPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SecondPage()),
+                  MaterialPageRoute(builder: (context) => const NextPage()),
                 );
               },
               child: const Text('Entrar'),
