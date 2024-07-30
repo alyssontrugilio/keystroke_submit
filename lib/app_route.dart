@@ -25,7 +25,7 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const FomrPage(),
     ),
     GoRoute(
-      path: AppRoute.formPage,
+      path: AppRoute.nextPage,
       builder: (context, state) => const NextPage(),
     ),
   ],
