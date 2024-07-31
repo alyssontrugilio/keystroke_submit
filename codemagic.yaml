@@ -1,0 +1,14 @@
+workflows:
+  build_and_deploy:
+    name: Build and Deploy Web App
+    max_build_duration: 120
+    instance_type: linux
+    environment:
+      flutter: stable
+    scripts:
+      - name: Build web
+        script: |
+          flutter config --enable-web
+          flutter build web --release
+          cd build/web
+          7z a -r ../web.zip ./*
