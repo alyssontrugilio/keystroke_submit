@@ -13,7 +13,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: const ColorScheme.dark(),
         useMaterial3: true,
       ),
       routerConfig: router,

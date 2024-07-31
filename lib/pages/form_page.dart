@@ -51,24 +51,43 @@ class _FomrPageState extends State<FomrPage> {
               onInvoke: (intent) => clickEnter(),
             )
           },
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50),
-            child: Focus(
-              autofocus: true,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                    ),
+          child: Center(
+            child: Container(
+              alignment: Alignment.center,
+              constraints: const BoxConstraints(maxWidth: 354),
+              child: Focus(
+                autofocus: true,
+                child: Form(
+                  autovalidateMode: AutovalidateMode.always,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          label: Text('Email'),
+                        ),
+                        validator: (value) =>
+                            value != null ? '' : 'Campo é obrigatório',
+                      ),
+                      const SizedBox(height: 10),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          label: Text('Senha'),
+                        ),
+                        validator: (value) =>
+                            value != null ? '' : 'Campo é obrigatório',
+                      ),
+                      const SizedBox(height: 30),
+                      FilledButton(
+                        onPressed: clickEnter,
+                        child: const Text('Entrar'),
+                      )
+                    ],
                   ),
-                  const SizedBox(height: 30),
-                  ElevatedButton(
-                    onPressed: clickEnter,
-                    child: const Text('Entrar'),
-                  )
-                ],
+                ),
               ),
             ),
           ),
