@@ -68,13 +68,25 @@ class CounterPageState extends State<CounterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    IconButton(
-                      onPressed: decrement,
-                      icon: const Icon(Icons.arrow_downward_rounded),
+                    Column(
+                      children: [
+                        const Text('Preesione arrowDown para diminuir'),
+                        const SizedBox(height: 10),
+                        IconButton(
+                          onPressed: decrement,
+                          icon: const Icon(Icons.arrow_downward_rounded),
+                        ),
+                      ],
                     ),
-                    IconButton(
-                      onPressed: increment,
-                      icon: const Icon(Icons.arrow_upward_rounded),
+                    Column(
+                      children: [
+                        const Text('Preesione arrowUp para aumentar'),
+                        const SizedBox(height: 10),
+                        IconButton(
+                          onPressed: increment,
+                          icon: const Icon(Icons.arrow_upward_rounded),
+                        ),
+                      ],
                     ),
                   ],
                 ),
