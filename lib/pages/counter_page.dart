@@ -58,7 +58,7 @@ class CounterPageState extends State<CounterPage> {
               children: [
                 Column(
                   children: [
-                    const Text('Preesione arrowDown para diminuir'),
+                    const Text('Pressione arrowDown para diminuir'),
                     const SizedBox(height: 10),
                     IconButton(
                       onPressed: decrement,
@@ -68,7 +68,7 @@ class CounterPageState extends State<CounterPage> {
                 ),
                 Column(
                   children: [
-                    const Text('Preesione arrowUp para aumentar'),
+                    const Text('Pressione arrowUp para aumentar'),
                     const SizedBox(height: 10),
                     IconButton(
                       onPressed: increment,

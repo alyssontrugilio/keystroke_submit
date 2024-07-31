@@ -16,13 +16,27 @@ class ChoicePage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              ElevatedButton(
-                onPressed: () => context.go(AppRoute.counterPage),
-                child: const Text('COUNTER'),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Pressione C para acessar contador'),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () => context.go(AppRoute.counterPage),
+                    child: const Text('COUNTER'),
+                  ),
+                ],
               ),
-              ElevatedButton(
-                onPressed: () => context.go(AppRoute.formPage),
-                child: const Text('FORMULÁRIO'),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Pressione F para acessar formulário'),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () => context.go(AppRoute.formPage),
+                    child: const Text('FORMULÁRIO'),
+                  ),
+                ],
               ),
             ],
           ),
