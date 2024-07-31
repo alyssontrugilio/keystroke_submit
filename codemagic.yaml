@@ -2,7 +2,7 @@ workflows:
   build_and_deploy:
     name: Build and Deploy Web App
     max_build_duration: 120
-    instance_type: linux
+    instance_type: mac_mini_m1
     environment:
       flutter: stable
     scripts:
