@@ -15,12 +15,12 @@ class KeyF extends Intent {}
 
 class KeyboardShortcuts extends StatelessWidget {
   final Widget child;
-  final Function(Enter)? enter;
-  final Function(ArrowUp)? arrowUp;
-  final Function(ArrowDown)? arrowDown;
-  final Function(Escape)? escape;
-  final Function(KeyC)? keyC;
-  final Function(KeyF)? keyF;
+  final void Function(Enter)? enter;
+  final void Function(ArrowUp)? arrowUp;
+  final void Function(ArrowDown)? arrowDown;
+  final void Function(Escape)? escape;
+  final void Function(KeyC)? keyC;
+  final void Function(KeyF)? keyF;
 
   const KeyboardShortcuts({
     required this.child,
